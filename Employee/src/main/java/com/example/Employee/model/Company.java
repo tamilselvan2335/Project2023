@@ -14,10 +14,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-/*
-jjfffjfj
- */
-
 @Entity
 @Table(name= "company")
 public class Company {
@@ -25,8 +21,7 @@ public class Company {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="Company_id")
 	private int c_id;	
-
-	private String test;
+	
 	@Column(name="c_name")
 	private String c_name;
 
