@@ -61,27 +61,6 @@ public class Employees {
 	public void setEmployeeAddress(EmployeeAddress employeeAddress) {
 		this.employeeAddress = employeeAddress;
 	}
-
-	public Employees() {
-		
-	}
-	
-	@Override
-	public String toString() {
-		return "Employee_details [empID=" + empID + ", emp_name=" + emp_name + ", emp_designation=" + emp_designation
-				+ ", salary=" + salary + ", emp_doj=" + emp_doj + "]";
-	}
-	public Employees(int empID, String emp_name, String emp_designation, float salary, Date emp_doj, Company cmp) {
-		super(); 
-		this.empID = empID;
-		this.emp_name = emp_name;
-		this.emp_designation = emp_designation;
-		this.salary = salary;
-		this.emp_doj = emp_doj;
-		this.company = cmp;
-	}
-	
-	
 	public int getEmpID() {
 		return empID;
 	}
@@ -112,12 +91,11 @@ public class Employees {
 	public void setSalary(float salary) {
 		this.salary = salary;
 	}
-	
-	
 	public Date getEmp_doj() {
 		return emp_doj;
 	}
 	public void setEmp_doj(Date emp_doj) {
 		this.emp_doj = emp_doj;
-	}	
+	}
+
 }
