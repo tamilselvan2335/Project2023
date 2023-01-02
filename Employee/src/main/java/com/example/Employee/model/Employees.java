@@ -98,4 +98,17 @@ public class Employees {
 		this.emp_doj = emp_doj;
 	}
 
+	public Employees(int empID, String emp_name, String emp_designation, float salary, Date emp_doj, Company company, EmployeeAddress employeeAddress, Headquarter headquarter) {
+		this.empID = empID;
+		this.emp_name = emp_name;
+		this.emp_designation = emp_designation;
+		this.salary = salary;
+		this.emp_doj = emp_doj;
+		this.company = company;
+		this.employeeAddress = employeeAddress;
+		this.headquarter = headquarter;
+	}
+
+	public Employees() {
+	}
 }
