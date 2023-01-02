@@ -45,7 +45,18 @@ public class Employees {
     @JoinColumn(name = "headquarter_Id")
     private Headquarter headquarter;
 
+<<<<<<< HEAD
 	public Long getEmpID() {
+=======
+	public EmployeeAddress getEmployeeAddress() {
+		return employeeAddress;
+	}
+
+	public void setEmployeeAddress(EmployeeAddress employeeAddress) {
+		this.employeeAddress = employeeAddress;
+	}
+	public int getEmpID() {
+>>>>>>> Building
 		return empID;
 	}
 
@@ -76,7 +87,10 @@ public class Employees {
 	public void setSalary(float salary) {
 		this.salary = salary;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> Building
 	public Date getEmp_doj() {
 		return emp_doj;
 	}
@@ -85,6 +99,7 @@ public class Employees {
 		this.emp_doj = emp_doj;
 	}
 
+<<<<<<< HEAD
 	public Company getCompany() {
 		return company;
 	}
@@ -111,4 +126,19 @@ public class Employees {
  
 	
 	
+=======
+	public Employees(int empID, String emp_name, String emp_designation, float salary, Date emp_doj, Company company, EmployeeAddress employeeAddress, Headquarter headquarter) {
+		this.empID = empID;
+		this.emp_name = emp_name;
+		this.emp_designation = emp_designation;
+		this.salary = salary;
+		this.emp_doj = emp_doj;
+		this.company = company;
+		this.employeeAddress = employeeAddress;
+		this.headquarter = headquarter;
+	}
+
+	public Employees() {
+	}
+>>>>>>> Building
 }
