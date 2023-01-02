@@ -22,7 +22,7 @@ public class Employees {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="emp_id")
-	private int empID;
+	private Long empID;
 	@Column(name="name")
 	private String emp_name;
 	@Column(name="designation")
@@ -44,8 +44,47 @@ public class Employees {
 	@ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "headquarter_Id")
     private Headquarter headquarter;
- 
-	
+
+	public Long getEmpID() {
+		return empID;
+	}
+
+	public void setEmpID(Long empID) {
+		this.empID = empID;
+	}
+
+	public String getEmp_name() {
+		return emp_name;
+	}
+
+	public void setEmp_name(String emp_name) {
+		this.emp_name = emp_name;
+	}
+
+	public String getEmp_designation() {
+		return emp_designation;
+	}
+
+	public void setEmp_designation(String emp_designation) {
+		this.emp_designation = emp_designation;
+	}
+
+	public float getSalary() {
+		return salary;
+	}
+
+	public void setSalary(float salary) {
+		this.salary = salary;
+	}
+
+	public Date getEmp_doj() {
+		return emp_doj;
+	}
+
+	public void setEmp_doj(Date emp_doj) {
+		this.emp_doj = emp_doj;
+	}
+
 	public Company getCompany() {
 		return company;
 	}
@@ -62,62 +101,14 @@ public class Employees {
 		this.employeeAddress = employeeAddress;
 	}
 
-	public Employees() {
-		
+	public Headquarter getHeadquarter() {
+		return headquarter;
 	}
-	
-	@Override
-	public String toString() {
-		return "Employee_details [empID=" + empID + ", emp_name=" + emp_name + ", emp_designation=" + emp_designation
-				+ ", salary=" + salary + ", emp_doj=" + emp_doj + "]";
+
+	public void setHeadquarter(Headquarter headquarter) {
+		this.headquarter = headquarter;
 	}
-	public Employees(int empID, String emp_name, String emp_designation, float salary, Date emp_doj, Company cmp) {
-		super(); 
-		this.empID = empID;
-		this.emp_name = emp_name;
-		this.emp_designation = emp_designation;
-		this.salary = salary;
-		this.emp_doj = emp_doj;
-		this.company = cmp;
-	}
+ 
 	
 	
-	public int getEmpID() {
-		return empID;
-	}
-	public void setEmpID(int empID) {
-		this.empID = empID;
-	}
-	
-	
-	public String getEmp_name() {
-		return emp_name;
-	}
-	public void setEmp_name(String emp_name) {
-		this.emp_name = emp_name;
-	}
-	
-	
-	public String getEmp_designation() {
-		return emp_designation;
-	}
-	public void setEmp_designation(String emp_designation) {
-		this.emp_designation = emp_designation;
-	}
-	
-	
-	public float getSalary() {
-		return salary;
-	}
-	public void setSalary(float salary) {
-		this.salary = salary;
-	}
-	
-	
-	public Date getEmp_doj() {
-		return emp_doj;
-	}
-	public void setEmp_doj(Date emp_doj) {
-		this.emp_doj = emp_doj;
-	}	
 }
